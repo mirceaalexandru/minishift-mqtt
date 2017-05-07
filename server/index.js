@@ -4,7 +4,7 @@ const mqtt = require('mqtt');
 const restify = require('restify');
 const stringify = require('fast-safe-stringify');
 
-const mqttBroker = `mqtt://${process.env.MQTT_BROKER}`;
+const mqttBroker = `mqtt://${process.env.MQTT_BROKER || 'localhost'}`;
 
 console.log(`Connecting to MQTT broker ${mqttBroker}`);
 const client  = mqtt.connect(mqttBroker);
