@@ -24,7 +24,7 @@ function ping(req, res, next) {
 
 function start() {
 	console.log(`Connected to MQTT broker...`);
-	const port = process.env.MOCK_SERVER_PORT || 3050;
+	const port = process.env.SERVER_PORT || 3050;
 	console.log(`Listen on ${port}`);
 	server.listen(port);
 }
